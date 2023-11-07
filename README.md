@@ -15,4 +15,10 @@ study, we propose a novel approach to address worst-group performance improvemen
 which identifies the most effective subnetworks for each sub-group while preserving
 previously chosen weights. Additionally, we presents analysis on three curricula
 for determining the sequential learning order. The empirical results indicate that the
-different variations of WSN outperform both ERM and groupDRO in terms of performance. Overall, this approach offers a promising solution to the challenge of continual learning and improving worst-group performance
+different variations of WSN outperform both ERM and groupDRO in terms of performance. Overall, this approach offers a promising solution to the challenge of continual learning and improving worst-group performance.
+
+<img width="493" alt="Screen Shot 2023-11-06 at 7 22 57 PM" src="https://github.com/ishaanshah15/10707_Project/assets/114367751/1d59fc25-6cce-4185-87ea-11f3fcc24940">
+
+
+
+<img width="598" alt="Screen Shot 2023-11-06 at 7 22 08 PM" src="https://github.com/ishaanshah15/10707_Project/assets/114367751/50cdabc6-0b81-46fd-84df-56f0ffa02071">
