@@ -19,6 +19,32 @@ different variations of WSN outperform both ERM and groupDRO in terms of perform
 
 <img width="493" alt="Screen Shot 2023-11-06 at 7 22 57 PM" src="https://github.com/ishaanshah15/10707_Project/assets/114367751/1d59fc25-6cce-4185-87ea-11f3fcc24940">
 
+Baseline results: Upon analyzing Table 2, it is evident that ERM performs poorly in terms of
+accuracy, averaging across the top 5 worst-performing sub-groups. This outcome aligns with ERM’s
+approach of training a model by averaging loss over all the datapoints without penalizing the
+underperforming sub-groups. On the other hand, groupDRO, though having lower average accuracy
+than ERM, yields the highest accuracy on the most challenging sub-group, i.e., ‘people.’ Additionally,
+it also outperforms ERM in terms of accuracy on other sub-groups. As groupDRO minimizes the
+maximum group loss, it directly optimizes for the worst-group. Hence, it is bound the give good
+results. However, due to this strategy, it leads to slight performance drop in the average scores.
+Winning Subnetwork results: WSN reports considerably high average accuracy than ERM and
+groupDRO, attesting its efficacy in a general setup. While the WSN approach does not improve on the
+single worst-group accuracy relative to ERM and GroupDRO, it shows significantly gains when we
+consider the five worst subgroups. The subgroup ‘people’ appears to be an outlier and requires more
+fine-grained discrimination compared to the other subgroups since the model must attend to relatively
+indistinct attributes such as hair, wrinkles, clothes, etc. On the remaining four worst subgroups, the
+WSN model achieves more than a 10 percent increase in accuracy compared to GroupDRO and ERM.
+It appears that the continual learning formulation and the ability of WSN framework to devote a
+percentage of the model weights to each subgroup leads to an overall improvement in the worst-group
+performance. One of the other interesting findings is that the average accuracy across also subgroups
+also increases compared to ERM. We believe that this could be because there is a mismatch between
+maximum likelihood and accuracy, where some outlier images may lead to large cross entropy loss
+but optimizing for these outliers may actually lead to lower overall accuracy. We believe that the
+superior avg accuracy of WSN over ERM may not hold up when we have a very large dataset, since
+the loss would be more stable in those settings. As for the curriculum learning, we find that the choice
+of curriculum does not appear to have any perceptible impact on the worst group performance. We
+now analyse some of the shortcomings of our approach, which will help us inform future directions
+of research.
 
 
 <img width="598" alt="Screen Shot 2023-11-06 at 7 22 08 PM" src="https://github.com/ishaanshah15/10707_Project/assets/114367751/50cdabc6-0b81-46fd-84df-56f0ffa02071">
