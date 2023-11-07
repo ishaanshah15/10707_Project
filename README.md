@@ -27,6 +27,8 @@ than ERM, yields the highest accuracy on the most challenging sub-group, i.e., â
 it also outperforms ERM in terms of accuracy on other sub-groups. As groupDRO minimizes the
 maximum group loss, it directly optimizes for the worst-group. Hence, it is bound the give good
 results. However, due to this strategy, it leads to slight performance drop in the average scores.
+
+
 Winning Subnetwork results: WSN reports considerably high average accuracy than ERM and
 groupDRO, attesting its efficacy in a general setup. While the WSN approach does not improve on the
 single worst-group accuracy relative to ERM and GroupDRO, it shows significantly gains when we
